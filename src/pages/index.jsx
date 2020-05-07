@@ -19,7 +19,7 @@ const Index = ({ data, location }) => {
     timer = setTimeout(() => {
       setQrCodeValue(input);
       setTyping(false);
-    }, 1000);
+    }, 700);
   }, [input]);
 
   return (

@@ -7,7 +7,7 @@ const QRCodeImage = (props) => {
   const { data, defaultData, loading } = props;
 
   useEffect(() => {
-    QRCode.toDataURL(data || defaultData, { quality: 1, margin: 1 })
+    QRCode.toDataURL(data || defaultData, { width: 500, margin: 2 })
       .then((url) => {
         setSrc(url);
       })
@@ -18,7 +18,7 @@ const QRCodeImage = (props) => {
 
   return (
     <div className="d-flex justify-content-center position-relative">
-      <img src={src} style={{ width: '500px', maxWidth: '100%' }}></img>
+      <img src={src}></img>
       {loading && <Loading />}
     </div>
   );
