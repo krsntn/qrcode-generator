@@ -7,14 +7,17 @@ const InputForm = (props) => {
     setInput(evt.target.value);
   };
 
+  const onSubmit = (evt) => {
+    evt.preventDefault();
+  };
+
   return (
-    <form>
+    <form onSubmit={onSubmit}>
       <div className="form-group">
         <input
           type="text"
           className="form-control"
-          id="exampleInputEmail1"
-          aria-describedby="emailHelp"
+          id="input"
           placeholder="Enter text"
           onChange={onInputChange}
           value={input}

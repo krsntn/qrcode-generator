@@ -17,7 +17,7 @@ const QRCodeImage = (props) => {
   }, [data]);
 
   return (
-    <div className="text-center">
+    <div className="text-center position-relative">
       <img src={src}></img>
       {loading && <Loading />}
     </div>
