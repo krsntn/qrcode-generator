@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'QR Code Generator',
     description: 'A quick QR code generator site',
-    siteUrl: 'https://qrcode.karson.tk',
+    siteUrl: 'https://qrcode.ga',
     profileUrl: 'https://dev.karson.tk',
     author: 'karson',
   },
@@ -38,7 +38,7 @@ module.exports = {
         name: 'qrcode-generator',
         short_name: 'QR Code Generator',
         description: 'A quick QR code generator site',
-        homepage_url: 'https://gatstrap.netlify.com',
+        homepage_url: 'https://qrcode.ga',
         start_url: '/',
         background_color: '#fff',
         theme_color: '#673ab7',

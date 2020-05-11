@@ -23,7 +23,7 @@ const Index = ({ data, location }) => {
   }, [input]);
 
   return (
-    <Layout location={location}>
+    <Layout location={location} data={get(data, 'site.meta')}>
       <Meta site={get(data, 'site.meta')} />
       <div className="container mt-4 mb-4">
         <InputForm input={input} setInput={setInput} />
@@ -44,7 +44,8 @@ export const pageQuery = graphql`
     site {
       meta: siteMetadata {
         title
-        url: profileUrl
+        url: siteUrl
+        profileUrl
         author
       }
     }

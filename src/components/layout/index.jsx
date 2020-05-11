@@ -17,12 +17,12 @@ class Layout extends React.Component {
   }
 
   render() {
-    const { children } = this.props;
+    const { data, children } = this.props;
     return (
       <div>
         <Navi title={siteMetadata.title} {...this.props} />
         {children}
-        <Footer title={siteMetadata.title} author={siteMetadata.author} />
+        <Footer url={data.profileUrl} author={data.author} />
       </div>
     );
   }
