@@ -6,7 +6,7 @@ const Footer = ({ url, author }) => (
     <div className="container text-center">
       <hr className="border-primary" />
       <p>
-        Built by <a href={url}>{author}</a>
+        built by <a href={url}>{author}</a>
       </p>
     </div>
   </div>

@@ -18,12 +18,12 @@ const InputForm = (props) => {
           type="text"
           className="form-control"
           id="input"
-          placeholder="Enter text"
+          placeholder="enter text..."
           onChange={onInputChange}
           value={input}
         />
         <small className="form-text text-muted">
-          We'll never collect any information you fill in.
+          no worry. we never collect any information you enter. :)
         </small>
       </div>
     </form>
