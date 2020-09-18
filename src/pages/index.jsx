@@ -1,6 +1,7 @@
 import { graphql } from 'gatsby';
 import React, { useState, useEffect } from 'react';
-import get from 'lodash/get';
+import { get, isEmpty } from 'lodash';
+import queryString from 'query-string';
 import Meta from 'components/meta';
 import Layout from 'components/layout';
 import QRCodeImage from 'components/qrcodeImage';
@@ -8,7 +9,7 @@ import InputForm from 'components/inputForm';
 
 let timer = null;
 
-const Index = ({ data, location }) => {
+const Index = ({ data, location, navigate }) => {
   const [qrCodeValue, setQrCodeValue] = useState(null);
   const [input, setInput] = useState('');
   const [typing, setTyping] = useState(false);
@@ -20,7 +21,20 @@ const Index = ({ data, location }) => {
       setQrCodeValue(input);
       setTyping(false);
     }, 700);
+
+    if (input) {
+      navigate(`?text=${input}`);
+    } else {
+      navigate('');
+    }
   }, [input]);
+
+  useEffect(() => {
+    const params = queryString.parse(location.search);
+    if (!isEmpty(params) && params.text) {
+      setInput(params.text);
+    }
+  }, []);
 
   return (
     <Layout location={location} data={get(data, 'site.meta')}>
