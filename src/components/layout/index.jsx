@@ -10,6 +10,7 @@ import 'prismjs/themes/prism.css';
 import 'scss/gatstrap.scss';
 import 'animate.css/animate.css';
 import 'font-awesome/css/font-awesome.css';
+import css from './layout.module.scss';
 
 class Layout extends React.Component {
   componentDidMount() {
@@ -19,7 +20,7 @@ class Layout extends React.Component {
   render() {
     const { data, children } = this.props;
     return (
-      <div>
+      <div className={css.layout}>
         <Navi title={siteMetadata.title} {...this.props} />
         {children}
         <Footer url={data.profileUrl} author={data.author} />
