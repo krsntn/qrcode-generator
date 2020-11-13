@@ -3,7 +3,7 @@ module.exports = {
     title: 'QR Code Generator',
     description: 'A quick QR code generator site',
     siteUrl: 'https://qrcode.ga',
-    profileUrl: 'https://dev.karson.tk',
+    profileUrl: 'https://dev.krsn.xyz',
     author: 'karson',
   },
   pathPrefix: '/',
